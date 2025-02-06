@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Imagen</title>
+    <script>
+        function cambiarImagen() {
+            const selector = document.getElementById('imagenSelector');
+            const imagen = document.getElementById('imagenMostrada');
+            imagen.src = selector.value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Selecciona una imagen</h1>
+    <select id="imagenSelector" onchange="cambiarImagen()">
+        <option value="imagen1.png">Imagen 1</option>
+        <option value="imagen2.png">Imagen 2</option>
+        <option value="imagen3.png">Imagen 3</option>
+    </select>
+    <br><br>
+    <img id="imagenMostrada" src="imagen1.png" alt="Imagen">
+</body>
+</html>

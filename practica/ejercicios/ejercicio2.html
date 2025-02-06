@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Dados</title>
+    <link rel="stylesheet" href="../css/style_dados.css">
+</head>
+<body>
+    <nav>
+        <h1>Ejercicios</h1>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="ejercicio1.html">Ejercicio 1</a></li>
+            <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+            <li><a href="ejercicio3.html">Ejercicio 3</a></li>
+            <li><a href="ejercicio4.html">Ejercicio 4</a></li>
+            <li><a href="ejercicio5.html">Ejercicio 5</a></li>
+            <li><a href="ejercicio6.html">Ejercicio 6</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Ejercicio 2</h2>
+        <p>Aquí va el contenido del ejercicio 2.</p>
+        <button onclick="window.location.href='../index.html'">Volver al Inicio</button>
+    </main>
+    <h1>Juego de Dados 🎲</h1>
+    <div class="dice-container">
+        <img id="dado1" src="../img/dado1.png" alt="Dado 1">
+        <img id="dado2" src="../img/dado1.png" alt="Dado 2">
+    </div>
+    <p id="resultado">Presiona el botón para lanzar los dados</p>
+    <button onclick="lanzarDados()">Lanzar Dados</button>
+
+    <script src="../js/script_dado.js"></script>
+</body>
+</html>

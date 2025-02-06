@@ -1,0 +1,78 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#takeoff {
+    background-color: green;
+    color: white;
+}
+
+#abort {
+    background-color: gray;
+    color: white;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav h1 {
+    margin: 0;
+    padding: 5px;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+main {
+    padding: 80px 20px; /* Espacio para que no quede debajo del menú */
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/style_carrito.css" rel="stylesheet">
+    <title>Carrito de Compra</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Ejercicios</h1>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="ejercicio1.html">Ejercicio 1</a></li>
+            <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+            <li><a href="ejercicio3.html">Ejercicio 3</a></li>
+            <li><a href="ejercicio4.html">Ejercicio 4</a></li>
+            <li><a href="ejercicio5.html">Ejercicio 5</a></li>
+            <li><a href="ejercicio6.html">Ejercicio 6</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Ejercicio 6</h2>
+        <p>Aquí va el contenido del ejercicio 6.</p>
+        <button onclick="window.location.href='../index.html'">Volver al Inicio</button>
+    </main>
+
+    <h1 class="text-center">Carrito de la compra</h1>
+    <div class="container">
+        <table class="table mx-auto">
+            <thead>
+                <tr>
+                    <th class="text-center">Producto</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Cantidad</th>
+                    <th class="text-center">Precio</th>
+                    <th class="text-center">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Producto uno</td>
+                    <td>
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, 1)">+</button>
+                        <input type="number" class="cantidad text-center" value="0" onchange="actualizarCarrito()">
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, -1)">-</button>
+                    </td>
+                    <td><input type="number" class="precio" value="72" readonly></td>
+                    <td class="subtotal text-end">0 €</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Producto dos</td>
+                    <td>
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, 1)">+</button>
+                        <input type="number" class="cantidad text-center" value="0" onchange="actualizarCarrito()">
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, -1)">-</button>
+                    </td>
+                    <td><input type="number" class="precio" value="125" readonly></td>
+                    <td class="subtotal text-end">0 €</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Producto tres</td>
+                    <td>
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, 1)">+</button>
+                        <input type="number" class="cantidad text-center" value="0" onchange="actualizarCarrito()">
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, -1)">-</button>
+                    </td>
+                    <td><input type="number" class="precio" value="250" readonly></td>
+                    <td class="subtotal text-end">0 €</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Producto cuatro</td>
+                    <td>
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, 1)">+</button>
+                        <input type="number" class="cantidad text-center" value="0" onchange="actualizarCarrito()">
+                        <button class="btn btn-outline-dark" onclick="cambiarCantidad(this, -1)">-</button>
+                    </td>
+                    <td><input type="number" class="precio" value="300" readonly></td>
+                    <td class="subtotal text-end">0 €</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="5" class="text-end">Total = <span id="total">0</span> €</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script>
+        function actualizarCarrito() {
+            let total = 0;
+            document.querySelectorAll('tbody tr').forEach(row => {
+                let cantidad = row.querySelector('.cantidad').value;
+                let precio = row.querySelector('.precio').value;
+                let subtotal = cantidad * precio;
+                row.querySelector('.subtotal').textContent = subtotal + ' €';
+                total += subtotal;
+            });
+            document.getElementById('total').textContent = total;
+        }
+
+        function cambiarCantidad(btn, delta) {
+            let input = btn.parentElement.querySelector('.cantidad');
+            let nuevaCantidad = Math.max(0, parseInt(input.value) + delta);
+            input.value = nuevaCantidad;
+            actualizarCarrito();
+        }
+    </script>
+</body>
+</html>

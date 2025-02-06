@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador con JavaScript</title>
+    <link rel="stylesheet" href="../css/style_dados.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Ejercicios</h1>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="ejercicio1.html">Ejercicio 1</a></li>
+            <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+            <li><a href="ejercicio3.html">Ejercicio 3</a></li>
+            <li><a href="ejercicio4.html">Ejercicio 4</a></li>
+            <li><a href="ejercicio5.html">Ejercicio 5</a></li>
+            <li><a href="ejercicio6.html">Ejercicio 6</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Ejercicio 1</h2>
+        <p>Aquí va el contenido del ejercicio 1.</p>
+        <button onclick="window.location.href='../index.html'">Volver al Inicio</button>
+    </main>
+
+    <h1>CONTADOR</h1>
+    <h1 id="contador">0</h1>
+    <button onclick="aumentarContador()">Aumentar</button>
+    <button onclick="disminuirContador()">Disminuir</button>
+    <button onclick="ResetearContador()">Resetear</button>
+    <script>
+        let contador = 0;
+        const mostrarContador = document.getElementById('contador');
+
+        function aumentarContador() {
+            if (contador < 10) {
+                contador++;
+                mostrarContador.textContent = contador;
+            } else { alert("Te has pasao del limite") }
+        } 
+    </script>
+    <script>
+        function disminuirContador() {
+            if (contador > -10) {
+                contador--;
+                mostrarContador.textContent = contador;
+            } else { alert("Te has pasao del limite") }
+        }
+    </script>
+    <script>
+        function ResetearContador() {
+            contador = 0;
+            mostrarContador.textContent = contador;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo</title>
+    <script>
+        function cambiarColorDeFondo(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <h1>Selecciona un color de fondo</h1>
+    <input type="radio" name="color" value="red" id="red" onchange="cambiarColorDeFondo(this.value)"> Rojo
+    <input type="radio" name="color" value="green" id="green" onchange="cambiarColorDeFondo(this.value)"> Verde
+    <input type="radio" name="color" value="blue" id="blue" onchange="cambiarColorDeFondo(this.value)"> Azul
+</body>
+</html>

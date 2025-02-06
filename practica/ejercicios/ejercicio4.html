@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="../css/style_ahorcado.css">
+</head>
+<body>
+  <nav>
+    <h1>Ejercicios</h1>
+    <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="ejercicio1.html">Ejercicio 1</a></li>
+        <li><a href="ejercicio2.html">Ejercicio 2</a></li>
+        <li><a href="ejercicio3.html">Ejercicio 3</a></li>
+        <li><a href="ejercicio4.html">Ejercicio 4</a></li>
+        <li><a href="ejercicio5.html">Ejercicio 5</a></li>
+        <li><a href="ejercicio6.html">Ejercicio 6</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Ejercicio 4</h2>
+    <p>Aquí va el contenido del ejercicio 4.</p>
+    <button onclick="window.location.href='../index.html'">Volver al Inicio</button>
+</main>
+
+  <h1>Juego del Ahorcado</h1>
+  <p id="word-display">_ _ _ _ _</p>
+  <p>Intentos restantes: <span id="attempts">6</span></p>
+  <p>Introduce una letra:</p>
+  <input type="text" id="letter-input" maxlength="1">
+  <button onclick="checkLetter()">Comprobar</button>
+  <p id="message"></p>
+
+  <script src="../js/script_ahorcado.js"></script>
+</body>
+</html>
